@@ -2,8 +2,11 @@
   --cold-white: #f6f1f1;
   --bright-blue: #19a7ce;
   --dark-blue: #146c94;
-  --black: #000000;
+  --black: #272727;
   --hero-image: url("../images/hero-image.png");
+  --story-image-1: url("../images/image-1.png");
+  --story-image-2: url("../images/image-2.png");
+  --story-image-3: url("../images/image-3.png");
 }
 
 *,
@@ -16,6 +19,7 @@
 
 body {
   background-color: var(--cold-white);
+  scrollbar-gutter: stable both-edges;
 }
 
 nav {
@@ -31,10 +35,7 @@ nav {
   height: 100%;
   font-size: 3rem;
   list-style: none;
-  display: flex;
   gap: 15%;
-  align-items: center;
-  justify-content: center;
 }
 
 .nav-list > li {
@@ -44,4 +45,67 @@ nav {
 
 .selected {
   background-color: var(--black);
+}
+
+#hero {
+  background-image: var(--hero-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.story-grid {
+  padding: 100px;
+  grid-gap: 100px 50px;
+  display: grid;
+  grid-template-columns: 650px 1fr;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-image {
+  height: 700px;
+}
+
+.image-holder {
+  height: 100%;
+  width: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#image-1 {
+  background-image: var(--story-image-1);
+}
+
+#image-2 {
+  background-image: var(--story-image-2);
+}
+
+#image-3 {
+  background-image: var(--story-image-3);
+}
+
+.story-text {
+}
+
+.text-holder {
+  background-color: var(--black);
+  color: var(--cold-white);
+  font-style: italic;
+  border-radius: 1rem;
+  padding: 30px 10px;
+  font-size: 2rem;
+  width: 35ch;
+  height: min-content;
+  text-align: right;
+  flex-direction: column;
+  gap: 25px;
 }
