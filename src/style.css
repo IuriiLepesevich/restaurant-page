@@ -3,10 +3,10 @@
   --bright-blue: #19a7ce;
   --dark-blue: #146c94;
   --black: #272727;
-  --hero-image: url("../images/hero-image.png");
-  --story-image-1: url("../images/image-1.png");
-  --story-image-2: url("../images/image-2.png");
-  --story-image-3: url("../images/image-3.png");
+  --hero-image: url("./images/hero-image.png");
+  --story-image-1: url("./images/image-1.png");
+  --story-image-2: url("./images/image-2.png");
+  --story-image-3: url("./images/image-3.png");
 }
 
 *,

@@ -1,8 +1,8 @@
-import createHome from "./home.js";
+import createHome from "./home";
 
 export default function createNav(...args) {
   const body = document.querySelector("body");
-  body.appendChild(createHome());
+  //body.appendChild(createHome());
   const nav = document.createElement("nav");
 
   const navList = document.createElement("ul");

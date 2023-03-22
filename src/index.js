@@ -1,5 +1,5 @@
 import "./style.css";
-import createNav from "./nav.js";
+import createNav from "./nav";
 
 const body = document.querySelector("body");
 
