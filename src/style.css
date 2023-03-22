@@ -7,6 +7,7 @@
   --story-image-1: url("./images/image-1.png");
   --story-image-2: url("./images/image-2.png");
   --story-image-3: url("./images/image-3.png");
+  --dish-image: url("./images/dish.png");
 }
 
 *,
@@ -93,9 +94,6 @@ nav {
   background-image: var(--story-image-3);
 }
 
-.story-text {
-}
-
 .text-holder {
   background-color: var(--black);
   color: var(--cold-white);
@@ -108,4 +106,54 @@ nav {
   text-align: right;
   flex-direction: column;
   gap: 25px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 100px;
+  grid-gap: 100px 50px;
+}
+
+.dish-card {
+    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: var(--bright-blue);
+  color: var(--cold-white);
+}
+
+.dish-image {
+  width: 100%;
+  height: 200px;
+  background-image: var(--dish-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dish-title {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.dish-ingredients {
+    font-size: 1.5em;
+}
+
+.dish-price {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.add {
+    outline: none;
+    background-color: var(--black);
+    color: var(--cold-white);
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
 }

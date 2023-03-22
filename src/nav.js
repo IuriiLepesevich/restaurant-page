@@ -1,4 +1,5 @@
 import createHome from "./home";
+import createMenu from "./menu";
 
 function renderContent() {
   const body = document.querySelector("body");
@@ -10,11 +11,13 @@ function renderContent() {
       elem.classList.remove("selected");
     }
   });
-  if (this.id === "home") body.firstChild.after(createHome());
+  const { id } = this;
+  if (id === "home") body.firstChild.after(createHome());
+  else if (id === "menu") body.firstChild.after(createMenu(15));
 }
 
 export default function createNav(...args) {
-  //document.querySelector("body").appendChild(createHome());
+  document.querySelector("body").appendChild(createHome());
   const nav = document.createElement("nav");
 
   const navList = document.createElement("ul");
