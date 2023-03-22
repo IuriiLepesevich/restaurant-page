@@ -1,24 +1,24 @@
 import createHome from "./home";
 
-export default function createNav(...args) {
+function renderContent() {
   const body = document.querySelector("body");
-  //body.appendChild(createHome());
+  const arr = Array.from(document.querySelector(".nav-list").childNodes);
+  arr.forEach((elem) => {
+    if (elem === this) {
+      elem.classList.add("selected");
+    } else {
+      elem.classList.remove("selected");
+    }
+  });
+  if (this.id === "home") body.firstChild.after(createHome());
+}
+
+export default function createNav(...args) {
+  //document.querySelector("body").appendChild(createHome());
   const nav = document.createElement("nav");
 
   const navList = document.createElement("ul");
   navList.classList.add("nav-list", "center");
-
-  function renderContent() {
-    const arr = Array.from(navList.childNodes);
-    arr.forEach((elem) => {
-      if (elem === this) {
-        elem.classList.add("selected");
-      } else {
-        elem.classList.remove("selected");
-      }
-    });
-    if (this.id === "home") body.appendChild(createHome());
-  }
 
   args.forEach((section) => {
     const li = document.createElement("li");
