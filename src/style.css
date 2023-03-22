@@ -1,0 +1,47 @@
+:root {
+  --cold-white: #f6f1f1;
+  --bright-blue: #19a7ce;
+  --dark-blue: #146c94;
+  --black: #000000;
+  --hero-image: url("../images/hero-image.png");
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: var(--cold-white);
+}
+
+nav {
+  background-color: var(--dark-blue);
+  color: var(--cold-white);
+  position: sticky;
+  top: 0;
+}
+
+.nav-list {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  list-style: none;
+  display: flex;
+  gap: 15%;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list > li {
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.selected {
+  background-color: var(--black);
+}
