@@ -1,11 +1,14 @@
 import "./style/style.css";
 import createNav from "./modules/nav";
-// import createHome from "./modules/home";
-// import createMenu from "./modules/menu";
-import createContact from "./modules/contact";
+
+import createHome from "./modules/home";
+
+import createFooter from "./modules/footer";
 
 const body = document.querySelector("body");
 
 body.firstChild.before(createNav("Home", "Menu", "Contact Us"));
 
-body.appendChild(createContact());
+body.appendChild(createHome());
+
+body.lastChild.after(createFooter());
