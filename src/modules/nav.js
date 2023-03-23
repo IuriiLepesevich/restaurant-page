@@ -1,5 +1,6 @@
 import createHome from "./home";
 import createMenu from "./menu";
+import createContact from "./contact";
 
 function renderContent() {
   const body = document.querySelector("body");
@@ -14,10 +15,10 @@ function renderContent() {
   const { id } = this;
   if (id === "home") body.firstChild.after(createHome());
   else if (id === "menu") body.firstChild.after(createMenu(15));
+  else if (id === "contact") body.firstChild.after(createContact());
 }
 
 export default function createNav(...args) {
-  document.querySelector("body").appendChild(createHome());
   const nav = document.createElement("nav");
 
   const navList = document.createElement("ul");

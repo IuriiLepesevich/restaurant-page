@@ -3,11 +3,11 @@
   --bright-blue: #19a7ce;
   --dark-blue: #146c94;
   --black: #272727;
-  --hero-image: url("./images/hero-image.png");
-  --story-image-1: url("./images/image-1.png");
-  --story-image-2: url("./images/image-2.png");
-  --story-image-3: url("./images/image-3.png");
-  --dish-image: url("./images/dish.png");
+  --hero-image: url("../images/hero-image.png");
+  --story-image-1: url("../images/image-1.png");
+  --story-image-2: url("../images/image-2.png");
+  --story-image-3: url("../images/image-3.png");
+  --dish-image: url("../images/dish.png");
 }
 
 *,
@@ -18,9 +18,14 @@
   margin: 0px;
 }
 
+html,
 body {
-  background-color: var(--cold-white);
-  scrollbar-gutter: stable both-edges;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -46,6 +51,11 @@ nav {
 
 .selected {
   background-color: var(--black);
+}
+
+#content {
+  background-color: var(--cold-white);
+  flex: 1;
 }
 
 #hero {
@@ -165,4 +175,75 @@ nav {
 .add:hover {
   background-color: var(--dark-blue);
   box-shadow: 0 8px 35px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+  width: 1200px;
+  height: 600px;
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 4fr 1fr;
+  grid-gap: 10px 20px;
+  background-color: var(--bright-blue);
+}
+
+.mail-holder,
+.contact-text-holder,
+.button-holder {
+  grid-column: 1 / -1;
+}
+
+.contact-form > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: var(--cold-white);
+}
+
+#text {
+  resize: none;
+}
+
+.form-input {
+  width: 100%;
+  flex: 1;
+  background-color: var(--dark-blue);
+}
+
+input,
+#text {
+  border: none;
+  outline: none;
+  color: var(--cold-white);
+  font-size: 1.5em;
+  padding: 10px 6px;
+}
+
+.submit {
+  background-color: var(--black);
+  width: max-content;
+  height: max-content;
+  padding: 20px 45px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.submit:hover {
+  box-shadow: 0 0px 35px rgba(255, 0, 0, 0.884);
+}
+
+.form-input.invalid {
+  background-color: rgba(255, 65, 65, 0.6);
+}
+
+.end-message {
+  font-size: 5rem;
+  font-weight: bold;
 }

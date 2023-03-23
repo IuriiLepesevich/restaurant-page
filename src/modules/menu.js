@@ -77,7 +77,7 @@ export default function createMenu(numberOfDishes) {
   const menuGrid = document.createElement("div");
   menuGrid.classList.add("menu-grid");
 
-  fillMenu(numberOfDishes);
+  fillMenu(numberOfDishes || 15);
 
   dishArray.forEach((dish) => createCard(dish, menuGrid));
 
